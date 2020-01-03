@@ -13,7 +13,7 @@ void init(void)
         GPIOC->OTYPER &= ~GPIO_OTYPER_OT_4; 
         GPIOC->PUPDR &= ~GPIO_PUPDR_PUPDR4; 
         GPIOC->PUPDR |= GPIO_PUPDR_PUPDR4_0;
-          GPIOC->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR4;
+        GPIOC->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR4;
         GPIOC->AFR[0]&= ~GPIO_AFRL_AFRL4;
         GPIOC->AFR[0]|= 7 << (4 * 4);
         
