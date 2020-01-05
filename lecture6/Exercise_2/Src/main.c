@@ -74,30 +74,30 @@ void WriteSerialString(char string[])
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	switch(Buffer) {
-				case 'b':
-					HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_8);
-					HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_12);
-				break;
-				
-				case 'r':
-					HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_9);
-				  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_13);
-				break;
-				
-				case 'o':
-					HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_10);
-				  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_14);
-				break;
-				
-				case 'g':
-					HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_11);
-				  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_15);
-				break;
-				
-				default:
-					/*! write data */
-					HAL_UART_Transmit_DMA(&huart1, &Buffer, 1);
-	  }
+        case 'b':
+            HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_8);
+            HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_12);
+        break;
+        
+        case 'r':
+            HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_9);
+          HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_13);
+        break;
+        
+        case 'o':
+            HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_10);
+          HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_14);
+        break;
+        
+        case 'g':
+            HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_11);
+          HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_15);
+        break;
+        
+        default:
+            /*! write data */
+            HAL_UART_Transmit_DMA(&huart1, &Buffer, 1);
+    }
 
 	HAL_UART_Receive_DMA(&huart1, &Buffer, 1);
 }
