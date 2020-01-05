@@ -49,3 +49,29 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+####### Listing files
+*.COD
+*.HTM
+*.I
+*.LST
+*.MAP
+*.M51
+*.M66
+*.SCR
+######## Object and HEX Files
+*.AXF
+*.D
+*.O
+*.SBR
+*.CRF
+*.ELF
+*.H86
+*.bin
+######## Other Files
+*.BAK
+*.LNP
+*.iex
+*.dep
+*.uvguix.*
+Backup/
